@@ -1,0 +1,60 @@
+// SPDX-License-Identifier: MIT
+
+/dts-v1/;
+
+#include <nordic/nrf52840_qiaa.dtsi>
+
+/ {
+    model = "Lotus58 BLE";
+    compatible = "lotus58_ble";
+
+    chosen {
+      zephyr,code-partition = &code_partition;
+      zephyr,sram = &sram0;
+      zephyr,flash = &flash0;
+    };
+
+    leds {
+      compatible = "gpio-leds";
+      led0: led 0 {
+        gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
+        label = "Blue LED1";
+      }
+    };
+
+    aliases {
+      led0 = &led0;
+    };
+};
+
+&gpio0 {
+  status = "okay";
+};
+
+&flash0 {
+  partitions {
+    compatible = "fixed-partitions";
+    #address-cells = <1>;
+    #size-cells = <1>;
+
+    mbr_partition: partition@0 {
+      label = "mbr"
+      reg = <0x00000000 0x00001000>;
+    };
+
+    code_partition: partition@1000 {
+      label = "code"
+      reg = <0x00001000 0x000eb000>;
+    };
+
+    storage_partition: partition@ec000 {
+      label = "storage"
+      reg = <0x000ec000 0x00008000>;
+    };
+
+    boot_partition: partition@f4000 {
+      label = "boot"
+      reg = <0x000f4000 0x0000c000>;
+    };
+  };
+};
