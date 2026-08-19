@@ -1,0 +1,20 @@
+file_format: "1"
+id: lotus58_ble
+name: Lotus58 BLE
+type: board
+arch: arm
+url: https://github.com/TweetyDaBird/Lotus-58-BLE
+exposes:
+  - nice_view
+features:
+  - keys
+  - display
+  - encoder
+  - underglow
+  - backlight
+outputs:
+  - ble
+  - usb
+sibllings:
+  - lotus58_ble_left
+  - lotus58_ble_right
