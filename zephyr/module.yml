@@ -1,4 +1,4 @@
-# name: zmk-keyboard-lotus58_ble
+name: zmk-keyboard-lotus58_ble
 build:
   settings:
     board_root: .
