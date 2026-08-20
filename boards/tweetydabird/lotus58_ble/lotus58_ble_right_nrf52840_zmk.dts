@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 
 #include "lotus58_ble.dtsi"
+#include "lotus58_ble_zmk.dtsi"
 
 &default_transform {
   col-offset = <6>;
