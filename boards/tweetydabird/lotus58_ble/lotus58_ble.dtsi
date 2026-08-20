@@ -20,7 +20,7 @@
   status = "okay";
 };
 
-// Enables GPIO port 1 (pins P1.00 toP1.15)
+// Enables GPIO port 1 (pins P1.00 to P1.15)
 &gpio1 {
   status = "okay";
 };
