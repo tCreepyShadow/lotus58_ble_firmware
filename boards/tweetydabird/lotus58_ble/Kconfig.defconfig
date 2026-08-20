@@ -12,3 +12,23 @@ config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif # BOARD_LOTUS58_BLE_LEFT
+
+
+if BOARD_LOTUS58_BLE_LEFT || BOARD_LOTUS58_BLE_RIGHT
+
+config BOARD
+    default "lotus58_ble"
+
+config ZMK_SPLIT
+    default y
+
+
+if USB
+
+config USB_NRFX
+    default y
+
+config USB_DEVICE_STACK
+    default y
+
+endif # USB
