@@ -21,3 +21,4 @@
 include: 
   - board: lotus58_ble_left
   - board: lotus58_ble_right
+  - board: nice_nano_v2
