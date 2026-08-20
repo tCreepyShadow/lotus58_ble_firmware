@@ -1,4 +1,7 @@
 ## SPDX-License-Identifier: MIT
 
-# Enable GPIO
+# Enables the memory protection unit
+CONFIG_ARM_MPU=y
+
+# Enables GPIO
 CONFIG_GPIO=y
