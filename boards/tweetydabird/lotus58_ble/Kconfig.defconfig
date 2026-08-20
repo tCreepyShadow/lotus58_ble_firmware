@@ -3,7 +3,7 @@
 if BOARD_LOTUS58_BLE_LEFT
 
 config BOARD
-    default "lotus58_ble left"
+    default "lotus58_ble_left"
 
 config ZMK_KEYBOARD_NAME
     default "Lotus58 BLE"
