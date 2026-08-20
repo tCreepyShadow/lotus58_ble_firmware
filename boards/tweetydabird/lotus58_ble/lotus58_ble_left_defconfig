@@ -1,0 +1,4 @@
+## SPDX-License-Identifier: MIT
+
+# Enable GPIO
+CONFIG_GPIO=y
