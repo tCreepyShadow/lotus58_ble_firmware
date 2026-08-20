@@ -15,5 +15,13 @@ CONFIG_FLASH_MAP=y
 #Output firmware as UF2 file
 CONFIG_BUILD_OUTPUT_UF2=y
 
+#Enables the internal crystal of the E73-2G4M08S1C
+CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
+CONFIG_CLOCK_CONTROL_NRF_K32SRC_500PPM=y
+
+# Uncomment to enable the external crystal on the board. Currently not used as the wrong is crystal on the board
+#CONFIG_CLOCK_CONTROL_NRF_K32SRC_XTAL=y
+#CONFIG_CLOCK_CONTROL_NRF_K32SRC_20PPM=y
+
 # Enable USB
 CONFIG_ZMK_USB=y
