@@ -1,6 +1,6 @@
 ## SPDX-License-Identifier: MIT
 
-# Enable writing to flash
+# Enables writing to flash
 CONFIG_USE_DT_CODE_PARTITION=y
 CONFIG_MPU_ALLOW_FLASH_WRITE=y
 CONFIG_NVS=y
@@ -20,5 +20,8 @@ CONFIG_CLOCK_CONTROL_NRF_K32SRC_500PPM=y
 #CONFIG_CLOCK_CONTROL_NRF_K32SRC_XTAL=y
 #CONFIG_CLOCK_CONTROL_NRF_K32SRC_20PPM=y
 
-# Enable USB
+# Enables USB
 CONFIG_ZMK_USB=y
+
+# Enables Bluetooth
+CONFIG_ZMK_BLE=y
