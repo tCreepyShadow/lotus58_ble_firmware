@@ -92,6 +92,10 @@
   status = "okay";
 };
 
+&gpio1 {
+  status = "okay";
+};
+
 // Enable GPIOTE for the keyboard matrix
 &gpiote {
     status = "okay";
