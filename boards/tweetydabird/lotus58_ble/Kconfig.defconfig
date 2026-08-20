@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: MIT
+
+if BOARD_LOTUS58_BLE_LEFT
+
+config BOARD
+    default "lotus58_ble left"
+
+config ZMK_KEYBOARD_NAME
+    default "Lotus58 BLE"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif # BOARD_LOTUS58_BLE_LEFT
