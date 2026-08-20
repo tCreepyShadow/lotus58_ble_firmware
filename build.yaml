@@ -21,4 +21,5 @@
 include: 
 #  - board: lotus58_ble_left
 #  - board: lotus58_ble_right
-  - board: nice60 
+  - board: corneish_zen_left
+  - board: corneish_zen_right
