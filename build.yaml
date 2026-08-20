@@ -19,5 +19,5 @@
 #
 ---
 include: 
-  - board: lotus58_ble_left//zmk
-  - board: lotus58_ble_right//zmk
+  - board: lotus58_ble_left
+  - board: lotus58_ble_right
