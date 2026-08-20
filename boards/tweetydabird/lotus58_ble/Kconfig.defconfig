@@ -32,3 +32,5 @@ config USB_DEVICE_STACK
     default y
 
 endif # USB
+
+endif # BOARD_LOTUS58_BLE_LEFT || BOARD_LOTUS58_BLE_RIGHT
