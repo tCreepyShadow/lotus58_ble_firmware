@@ -20,6 +20,6 @@
 ---
 include: 
   - board: lotus58_ble_left//zmk
-    artifact name: lotus58_ble_left
+    artifact-name: lotus58_ble_left
   - board: lotus58_ble_right//zmk
-    artifact name: lotus58_ble_right
+    artifact-name: lotus58_ble_right
