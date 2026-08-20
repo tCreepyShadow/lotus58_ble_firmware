@@ -104,6 +104,11 @@
   status = "okay";
 };
 
+// Enable GPIOTE for the keyboard matrix
+&gpiote {
+    status = "okay";
+};
+
 &flash0 {
   partitions {
     compatible = "fixed-partitions";
