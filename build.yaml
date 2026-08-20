@@ -19,7 +19,5 @@
 #
 ---
 include: 
-#  - board: lotus58_ble_left
-#  - board: lotus58_ble_right
-  - board: corneish_zen_left
-  - board: corneish_zen_right
+  - board: lotus58_ble_left
+  - board: lotus58_ble_right

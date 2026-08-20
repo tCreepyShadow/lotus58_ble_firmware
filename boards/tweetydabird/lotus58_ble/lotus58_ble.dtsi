@@ -19,18 +19,6 @@
       zmk,physical-layout = &default_layout;
     };
 
-    leds {
-		  compatible = "gpio-leds";
-		  led0: led_0 {
-			  gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
-			  label = "Blue LED1";
-		  };
-	  };
-
-    aliases {
-      led0 = &led0;
-    };
-
     default_transform: keymap_transform_0 {
       compatible = "zmk,matrix-transform";
       columns = <12>;
