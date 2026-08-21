@@ -1,16 +1,15 @@
 // SPDX-License-Identifier: MIT
 
-// Matrix transform so the keymap works
-#include <dt-bindings/zmk/matrix_transform.h>
-// Pin control for the RGB LEDs
-#include "lotus58_ble-pinctrl.dtsi"
+#include <dt-bindings/zmk/matrix_transform.h> // Matrix transform so the keymap works
+#include "lotus58_ble-pinctrl.dtsi" // Pin control for the RGB LEDs
 #include <dt-bindings/led/led.h>
 
 / {
     chosen {
       zmk,kscan = &kscan0;
       zmk,physical-layout = &default_layout;
-      zmk,underglow = &led_strip;
+      zmk,underglow = &led_strip; // Needed for underglow
+      zmk,battery = &vbatt; // Needed for battery sensing
     };
 
     default_transform: keymap_transform_0 {
@@ -109,6 +108,11 @@
       compatible = "zmk,ext-power-generic";
       control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
       init-delay-ms = <50>;
+    };
+
+    // Uses the nRF52840s built in VDDH battery sensor
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
     };
 };
 

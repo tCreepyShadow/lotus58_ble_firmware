@@ -40,6 +40,11 @@
   status = "okay";
 };
 
+// Enables the analog to digital converter to measure the battery voltage
+&adc {
+  status = "okay";
+};
+
 &flash0 {
   partitions {
     compatible = "fixed-partitions";
