@@ -125,7 +125,7 @@
     reg = <0>;
     spi-max-frequency = <4000000>;
 
-    chain-length = <6>; // Number of LEDs in the (underglow for now) chain
+    chain-length = <28>; // Number of LEDs in the (underglow for now) chain
     spi-one-frame = <0x70>;
     spi-zero-frame = <0x40>;
     color-mapping = <
