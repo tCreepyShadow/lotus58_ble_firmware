@@ -15,8 +15,13 @@
     };
 };
 
-// Enables GPIO port 0 (pins P0.00 to P0.31)
+// Enables GPIO port 0 (pins P0.00 to P0.31) used by the keyboard matrix
 &gpio0 {
+  status = "okay";
+};
+
+// Enables GPIO port 1 (pins P1.00 to P1.15) used by the encoders and LEDs
+&gpio1 {
   status = "okay";
 };
 

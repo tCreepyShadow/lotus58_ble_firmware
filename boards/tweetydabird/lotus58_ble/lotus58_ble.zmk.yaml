@@ -10,7 +10,7 @@ exposes:
 features:
   - keys
 #  - display
-#  - encoder
+  - encoder
 #  - underglow
 #  - backlight
 #  - studio
