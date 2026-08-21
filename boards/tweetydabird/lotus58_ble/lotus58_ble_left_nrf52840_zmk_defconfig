@@ -3,8 +3,11 @@
 # Enables the memory protection unit
 CONFIG_ARM_MPU=y
 
-# Enables GPIO
+# Enables GPIO. Not technically needed, since active by default
 CONFIG_GPIO=y
+
+# Enables pinctrl. Not technically needed, since active by default
+CONFIG_PINCTRL=y
 
 # Enables writing to flash
 CONFIG_USE_DT_CODE_PARTITION=y
