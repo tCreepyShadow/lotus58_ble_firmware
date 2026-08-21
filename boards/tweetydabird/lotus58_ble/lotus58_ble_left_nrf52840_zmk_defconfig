@@ -42,3 +42,6 @@ CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
 # Enables underglow LEDs and sets the brightness to 25 percent
 CONFIG_ZMK_RGB_UNDERGLOW=y
 CONFIG_ZMK_RGB_UNDERGLOW_BRT_START=25
+
+# Enables the nice!view display
+CONFIG_ZMK_DISPLAY=y
