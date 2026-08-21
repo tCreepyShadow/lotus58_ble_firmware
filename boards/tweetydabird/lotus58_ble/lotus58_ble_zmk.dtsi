@@ -103,12 +103,10 @@
       triggers-per-rotation = <20>;
     };
 
-    glow_power: glow_power_control {
-      compatible = "regulator-fixed";
-      regulator-name = "glow-power-control";
-      enable-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
-      regulator-boot-on;
-      regulator-always-on;
+    // Controls the power of the LEDs through the onboard MOSFETs
+    ext_power: ext_power_control {
+      compatible = "zmk,ext-power-generic";
+      control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
     };
 };
 
