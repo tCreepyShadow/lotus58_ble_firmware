@@ -31,3 +31,7 @@ CONFIG_ZMK_USB=y
 
 # Enables Bluetooth
 CONFIG_ZMK_BLE=y
+
+# Uncomment these lines below to enable encoders.
+CONFIG_EC11=y
+CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
