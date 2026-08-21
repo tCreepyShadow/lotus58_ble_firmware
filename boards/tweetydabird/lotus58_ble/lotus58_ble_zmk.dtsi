@@ -1,12 +1,15 @@
 // SPDX-License-Identifier: MIT
 
-// matrix transform so the keymap works
+// Matrix transform so the keymap works
 #include <dt-bindings/zmk/matrix_transform.h>
+// Pin control for the RGB LEDs
+#include "lotus58_ble-pinctrl.dtsi"
 
 / {
     chosen {
       zmk,kscan = &kscan0;
       zmk,physical-layout = &default_layout;
+      zmk,underglow = &led_strip;
     };
 
     default_transform: keymap_transform_0 {
@@ -98,4 +101,37 @@
       sensors = <&left_encoder &right_encoder>;
       triggers-per-rotation = <20>;
     };
+
+    glow_power: glow_power_control {
+      compatible = "regulator-fixed";
+      regulator-name = "glow-power-control";
+      enable-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
+      regulator-boot-on;
+      regulator-always-on;
+    };
+};
+
+&spi3 {
+  compatible = "nordic,nrf-spim";
+  status = "okay";
+  pinctrl-0 = <&spi3_default>;
+  pinctrl-1 = <&spi3_sleep>;
+  pinctrl-names = "default", "sleep";
+
+  // The Lotus58 BLE uses WS2812 compatible SK6812MINI-E LEDs
+  led_strip: ws2812@0 {
+    compatible = "worldsemi,ws2812-spi";
+
+    reg = <0>;
+    spi-max-frequency = <4000000>;
+
+    chain-length = <6>; // Number of LEDs in the (underglow for now) chain
+    spi-one-frame = <0x70>;
+    spi-zero-frame = <0x40>;
+    color-mapping = <
+      LED_COLOR_ID_GREEN
+      LED_COLOR_ID_RED
+      LED_COLOR_ID_BLUE
+    >;
+  };
 };
