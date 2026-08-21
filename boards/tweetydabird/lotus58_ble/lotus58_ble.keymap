@@ -2,8 +2,8 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-// Needed for bluetooth keybinds
-#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/bt.h> // Needed for bluetooth keybinds
+#include <dt-bindings/zmk/ext_power.h> // Needed for the ability to switch off power to the underglow LEDs
 
 / {
 	keymap {

@@ -104,9 +104,10 @@
     };
 
     // Controls the power of the LEDs through the onboard MOSFETs
-    ext_power: ext_power_control {
+    glow_power: glow_power_control {
       compatible = "zmk,ext-power-generic";
       control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
+      init-delay-ms = <50>;
     };
 };
 
