@@ -11,8 +11,7 @@ features:
   - keys
 #  - display
   - encoder
-#  - underglow
-#  - backlight
+  - underglow
 #  - studio
 outputs:
   - ble
