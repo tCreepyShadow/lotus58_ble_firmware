@@ -4,11 +4,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
-    model = "Lotus58 BLE";
-    compatible = "lotus58_ble";
-
     chosen {
-      // needed for matrix definition
       zmk,kscan = &kscan0;
       zmk,physical-layout = &default_layout;
     };
@@ -68,7 +64,7 @@
         // | Pin6 |      | SW11 | SW12 |      | SW13 | SW14 | SW15 |
         // | Pin6 |      | SW16 | SW17 | SW18 |      | SW19 | SW20 |
         // | Pin6 |      | SW21 | SW22 | SW23 | SW24 |      | SW25 |
-        // | Pin6 |      |      | SW26 | SW27 | SW28 | SW29 |      ||
+        // | Pin6 |      |      | SW26 | SW27 | SW28 | SW29 |      |
 
         interrupt-gpios = <&gpio0 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         gpios

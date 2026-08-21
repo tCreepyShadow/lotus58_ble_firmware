@@ -1,4 +1,10 @@
-## SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MIT
+
+# Enables the memory protection unit
+CONFIG_ARM_MPU=y
+
+# Enables GPIO
+CONFIG_GPIO=y
 
 # Enables writing to flash
 CONFIG_USE_DT_CODE_PARTITION=y

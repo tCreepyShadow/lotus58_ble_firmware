@@ -1,3 +1,4 @@
+# Uncommented features are not yet implemented
 file_format: "1"
 id: lotus58_ble
 name: Lotus58 BLE
@@ -8,10 +9,11 @@ exposes:
   - nice_view
 features:
   - keys
-  - display
-  - encoder
-  - underglow
-  - backlight
+#  - display
+#  - encoder
+#  - underglow
+#  - backlight
+#  - studio
 outputs:
   - ble
   - usb

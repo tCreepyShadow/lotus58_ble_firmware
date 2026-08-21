@@ -20,17 +20,12 @@
   status = "okay";
 };
 
-// Enables GPIO port 1 (pins P1.00 to P1.15)
-&gpio1 {
-  status = "okay";
-};
-
 // Enables GPIO tasks and events for the keyboard matrix interrupts
 &gpiote {
     status = "okay";
 };
 
-// lifts the reservation of the NFC pins so they can be used as GPIO for the matrix
+// Lifts the reservation of the NFC pins so they can be used as GPIO for the matrix
 &uicr {
   nfct-pins-as-gpios;
 };

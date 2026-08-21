@@ -1,7 +1,15 @@
-## SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MIT
 
 # Enables the memory protection unit
 CONFIG_ARM_MPU=y
 
 # Enables GPIO
 CONFIG_GPIO=y
+
+#Enables the internal crystal of the E73-2G4M08S1C. When the external crystal is fixed, this can be disabled.
+CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
+CONFIG_CLOCK_CONTROL_NRF_K32SRC_500PPM=y
+
+# Uncomment to enable the external crystal on the board. Currently not used as the wrong crystal is on the board.
+#CONFIG_CLOCK_CONTROL_NRF_K32SRC_XTAL=y
+#CONFIG_CLOCK_CONTROL_NRF_K32SRC_20PPM=y

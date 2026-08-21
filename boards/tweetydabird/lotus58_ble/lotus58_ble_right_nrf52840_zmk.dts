@@ -3,6 +3,7 @@
 #include "lotus58_ble.dtsi"
 #include "lotus58_ble_zmk.dtsi"
 
+// This offsets the keyboard matrix, so the right half actually types the desired keys
 &default_transform {
   col-offset = <6>;
 };
