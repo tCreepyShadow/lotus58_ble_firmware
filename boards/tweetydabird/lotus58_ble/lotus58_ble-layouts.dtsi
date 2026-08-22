@@ -13,8 +13,8 @@
       			// | SW01 | SW02 | SW03 | SW04 | SW05 | SW06 |                      | SW07 | SW08 | SW09 | SW10 | SW11 | SW12 |
       			// | SW13 | SW14 | SW15 | SW16 | SW17 | SW18 |                      | SW19 | SW20 | SW21 | SW22 | SW23 | SW24 |
       			// | SW25 | SW26 | SW27 | SW28 | SW29 | SW30 |                      | SW31 | SW32 | SW33 | SW34 | SW35 | SW36 |
-      			// | SW37 | SW38 | SW39 | SW40 | SW41 | SW42 | SW53 |        | SW54 | SW43 | SW44 | SW45 | SW46 | SW47 | SW48 |
-      			//                      | SW49 | SW50 | SW51 | SW52 |        | SW55 | SW56 | SW57 | SW58 |
+      			// | SW37 | SW38 | SW39 | SW40 | SW41 | SW42 | SW43 |        | SW44 | SW45 | SW46 | SW47 | SW48 | SW49 | SW50 |
+      			//                      | SW51 | SW52 | SW53 | SW54 |        | SW55 | SW56 | SW57 | SW58 |
       			//
       			// Switch positions as noted in the PCB file.
       			// | SW06 | SW01 | SW02 | SW03 | SW04 | SW05 |                      | SW05 | SW04 | SW03 | SW02 | SW01 | SW06 |
@@ -80,83 +80,21 @@
 			<&key_physical_attrs 100 100  300  300       0     0     0>, //SW40
 			<&key_physical_attrs 100 100  400  307       0     0     0>, //SW41
 			<&key_physical_attrs 100 100  500  320       0     0     0>, //SW42
-			<&key_physical_attrs 100 100 1000  320       0     0     0>, //SW43
-			<&key_physical_attrs 100 100 1100  307       0     0     0>, //SW44
-			<&key_physical_attrs 100 100 1200  300       0     0     0>, //SW45
-			<&key_physical_attrs 100 100 1300  307       0     0     0>, //SW46
-			<&key_physical_attrs 100 100 1400  332       0     0     0>, //SW47
-			<&key_physical_attrs 100 100 1500  340       0     0     0>, //SW48
-			<&key_physical_attrs 100 100  250  407       0     0     0>, //SW49
-			<&key_physical_attrs 100 100  350  413       0     0     0>, //SW50
-			<&key_physical_attrs 100 100  450  420       0     0     0>, //SW51
-			<&key_physical_attrs 100 150  585  419    3000   635   494>, //SW52
-			<&key_physical_attrs 100 100  625  273       0     0     0>, //SW53 or encoder
-			<&key_physical_attrs 100 100  875  273       0     0     0>, //SW54 or encoder
+			<&key_physical_attrs 100 100  625  273       0     0     0>, //SW43 or encoder
+			<&key_physical_attrs 100 100  875  273       0     0     0>, //SW44 or encoder
+			<&key_physical_attrs 100 100 1000  320       0     0     0>, //SW45
+			<&key_physical_attrs 100 100 1100  307       0     0     0>, //SW46
+			<&key_physical_attrs 100 100 1200  300       0     0     0>, //SW47
+			<&key_physical_attrs 100 100 1300  307       0     0     0>, //SW48
+			<&key_physical_attrs 100 100 1400  332       0     0     0>, //SW49
+			<&key_physical_attrs 100 100 1500  340       0     0     0>, //SW50
+			<&key_physical_attrs 100 100  250  407       0     0     0>, //SW51
+			<&key_physical_attrs 100 100  350  413       0     0     0>, //SW52
+			<&key_physical_attrs 100 100  450  420       0     0     0>, //SW53
+			<&key_physical_attrs 100 150  585  419    3000   635   494>, //SW54
 			<&key_physical_attrs 100 150  915  419 (-3000)   965   494>, //SW55
 			<&key_physical_attrs 100 100 1050  420       0     0     0>, //SW56
 			<&key_physical_attrs 100 100 1150  413       0     0     0>, //SW57
 			<&key_physical_attrs 100 100 1250  407       0     0     0>; //SW58
-
-/*
-		keys =	// Left half           w   h    x    y     rot    rx    ry
-			<&key_physical_attrs 100 100    0   40       0     0     0>, //SW01
-			<&key_physical_attrs 100 100  100   32       0     0     0>, //SW02
-			<&key_physical_attrs 100 100  200    7       0     0     0>, //SW03
-			<&key_physical_attrs 100 100  300    0       0     0     0>, //SW04
-			<&key_physical_attrs 100 100  400    7       0     0     0>, //SW05
-			<&key_physical_attrs 100 100  500   20       0     0     0>, //SW06
-			<&key_physical_attrs 100 100    0  140       0     0     0>, //SW07
-			<&key_physical_attrs 100 100  100  132       0     0     0>, //SW08
-			<&key_physical_attrs 100 100  200  107       0     0     0>, //SW09
-			<&key_physical_attrs 100 100  300  100       0     0     0>, //SW10
-			<&key_physical_attrs 100 100  400  107       0     0     0>, //SW11
-			<&key_physical_attrs 100 100  500  120       0     0     0>, //SW12
-			<&key_physical_attrs 100 100    0  240       0     0     0>, //SW13
-			<&key_physical_attrs 100 100  100  232       0     0     0>, //SW14
-			<&key_physical_attrs 100 100  200  207       0     0     0>, //SW15
-			<&key_physical_attrs 100 100  300  200       0     0     0>, //SW16
-			<&key_physical_attrs 100 100  400  207       0     0     0>, //SW17
-			<&key_physical_attrs 100 100  500  220       0     0     0>, //SW18
-			<&key_physical_attrs 100 100    0  340       0     0     0>, //SW19
-			<&key_physical_attrs 100 100  100  332       0     0     0>, //SW20
-			<&key_physical_attrs 100 100  200  307       0     0     0>, //SW21
-			<&key_physical_attrs 100 100  300  300       0     0     0>, //SW22
-			<&key_physical_attrs 100 100  400  307       0     0     0>, //SW23
-			<&key_physical_attrs 100 100  500  320       0     0     0>, //SW24
-			<&key_physical_attrs 100 100  250  407       0     0     0>, //SW25
-			<&key_physical_attrs 100 100  350  413       0     0     0>, //SW26
-			<&key_physical_attrs 100 100  450  420       0     0     0>, //SW27
-			<&key_physical_attrs 100 150  585  419    3000   635   494>, //SW28
-			<&key_physical_attrs 100 100  625  273       0     0     0>, //SW29 or encoder
-			// Right half          w   h    x    y     rot    rx    ry
-			<&key_physical_attrs 100 100  875  273       0     0     0>, //SW29 or encoder
-			<&key_physical_attrs 100 150  915  419 (-3000)   965   494>, //SW28
-			<&key_physical_attrs 100 100 1050  420       0     0     0>, //SW27
-			<&key_physical_attrs 100 100 1150  413       0     0     0>, //SW26
-			<&key_physical_attrs 100 100 1250  407       0     0     0>, //SW25
-			<&key_physical_attrs 100 100 1000  320       0     0     0>, //SW24
-			<&key_physical_attrs 100 100 1100  307       0     0     0>, //SW23
-			<&key_physical_attrs 100 100 1200  300       0     0     0>, //SW22
-			<&key_physical_attrs 100 100 1300  307       0     0     0>, //SW21
-			<&key_physical_attrs 100 100 1400  332       0     0     0>, //SW20
-			<&key_physical_attrs 100 100 1500  340       0     0     0>, //SW19
-			<&key_physical_attrs 100 100 1000  220       0     0     0>, //SW18
-			<&key_physical_attrs 100 100 1100  207       0     0     0>, //SW17
-			<&key_physical_attrs 100 100 1200  200       0     0     0>, //SW16
-			<&key_physical_attrs 100 100 1300  207       0     0     0>, //SW15
-			<&key_physical_attrs 100 100 1400  232       0     0     0>, //SW14
-			<&key_physical_attrs 100 100 1500  240       0     0     0>, //SW13
-			<&key_physical_attrs 100 100 1000  120       0     0     0>, //SW12
-			<&key_physical_attrs 100 100 1100  107       0     0     0>, //SW11
-			<&key_physical_attrs 100 100 1200  100       0     0     0>, //SW10
-			<&key_physical_attrs 100 100 1300  107       0     0     0>, //SW09
-			<&key_physical_attrs 100 100 1400  132       0     0     0>, //SW08
-			<&key_physical_attrs 100 100 1500  140       0     0     0>, //SW07
-			<&key_physical_attrs 100 100 1000   20       0     0     0>, //SW06
-			<&key_physical_attrs 100 100 1100    7       0     0     0>, //SW05
-			<&key_physical_attrs 100 100 1200    0       0     0     0>, //SW04
-			<&key_physical_attrs 100 100 1300    7       0     0     0>, //SW03
-			<&key_physical_attrs 100 100 1400   32       0     0     0>, //SW02
-			<&key_physical_attrs 100 100 1500   40       0     0     0>; //SW01*/
 	};
 };
