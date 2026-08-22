@@ -18,10 +18,10 @@ CONFIG_FLASH=y
 CONFIG_FLASH_PAGE_LAYOUT=y
 CONFIG_FLASH_MAP=y
 
-#Output firmware as UF2 file.
+# Output firmware as UF2 file.
 CONFIG_BUILD_OUTPUT_UF2=y
 
-#Enables the internal crystal of the E73-2G4M08S1C. When the external crystal is fixed, this can be disabled.
+# Enables the internal crystal of the E73-2G4M08S1C. When the external crystal is fixed, this can be disabled.
 CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
 CONFIG_CLOCK_CONTROL_NRF_K32SRC_500PPM=y
 
@@ -48,3 +48,13 @@ CONFIG_ZMK_DISPLAY=y
 
 # Enables ZMK Studio support.
 CONFIG_ZMK_STUDIO=y
+
+// Enables deep sleep.
+CONFIG_ZMK_SLEEP=y
+
+// Sets the number of simultaneously reported keypresses to 10 and enables that-number-of-keys rollover.
+CONFIG_ZMK_HID_CONSUMER_REPORT_SIZE=20
+CONFIG_ZMK_HID_REPORT_TYPE_HKR0=y
+
+// Turns off underglow when idling.
+CONFIG_ZMK_RGB_UNDERGLOW_AUTO_OFF_IDLE=y
