@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: MIT
 
-#include "lotus58_ble-layouts.dtsi"
-#include "lotus58_ble-pinctrl.dtsi" // Pin control for the RGB LEDs
-#include <dt-bindings/led/led.h>
+#include "lotus58_ble-layouts.dtsi" // Layout file with matrix transform and physical layout.
+#include "lotus58_ble-pinctrl.dtsi" // Pin control for the RGB LEDs.
+#include <dt-bindings/led/led.h> // Needed for the color-mapping of the LEDs.
 
 / {
     chosen {
       zmk,kscan = &kscan0;
       zmk,physical-layout = &physical_layout0; // Used by the layouts file
-      zmk,underglow = &led_strip; // Needed for underglow
-      zmk,battery = &vbatt; // Needed for battery level sensing
+      zmk,underglow = &led_strip; // Needed for underglow.
+      zmk,battery = &vbatt; // Needed for battery level sensing.
     };
 
     kscan0: kscan0 {
@@ -68,15 +68,15 @@
       triggers-per-rotation = <20>;
     };
 
-    // Controls the power of the LEDs through the onboard MOSFETs
-    // Unused because of a an error on the PCB. Q3 is wired wrong and thusly the power toggle doesn't work
+    // Controls the power of the LEDs through the onboard MOSFETs.
+    // Unused because of a an error on the PCB. Q3 is wired wrong and thusly the power toggle doesn't work.
     glow_power: EXT_POWER {
       compatible = "zmk,ext-power-generic";
       control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
       init-delay-ms = <50>;
     };
 
-    // Uses the nRF52840s built in VDDH battery sensor
+    // Uses the nRF52840s built in VDDH battery level sensor.
     vbatt: vbatt {
         compatible = "zmk,battery-nrf-vddh";
     };
@@ -89,14 +89,14 @@
   pinctrl-1 = <&spi3_sleep>;
   pinctrl-names = "default", "sleep";
 
-  // The Lotus58 BLE uses WS2812 compatible SK6812MINI-E LEDs
+  // The Lotus58 BLE uses WS2812 compatible SK6812MINI-E LEDs.
   led_strip: ws2812@0 {
     compatible = "worldsemi,ws2812-spi";
 
     reg = <0>;
     spi-max-frequency = <4000000>;
 
-    chain-length = <28>; // Number of LEDs in the (underglow for now) chain
+    chain-length = <28>; // Number of LEDs in the chain.
     spi-one-frame = <0x70>;
     spi-zero-frame = <0x40>;
     color-mapping = <

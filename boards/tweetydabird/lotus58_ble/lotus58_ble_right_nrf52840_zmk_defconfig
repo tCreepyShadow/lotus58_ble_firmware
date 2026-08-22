@@ -1,15 +1,15 @@
 # SPDX-License-Identifier: MIT
 
-# Enables the memory protection unit
+# Enables the memory protection unit.
 CONFIG_ARM_MPU=y
 
-# Enables GPIO. Not technically needed, since active by default
+# Enables GPIO. Not technically needed, since active by default.
 CONFIG_GPIO=y
 
-# Enables pinctrl. Not technically needed, since active by default
+# Enables pinctrl. Not technically needed, since active by default.
 CONFIG_PINCTRL=y
 
-# Enables writing to flash
+# Enables writing to flash.
 CONFIG_USE_DT_CODE_PARTITION=y
 CONFIG_MPU_ALLOW_FLASH_WRITE=y
 CONFIG_NVS=y
@@ -18,7 +18,7 @@ CONFIG_FLASH=y
 CONFIG_FLASH_PAGE_LAYOUT=y
 CONFIG_FLASH_MAP=y
 
-#Output firmware as UF2 file
+#Output firmware as UF2 file.
 CONFIG_BUILD_OUTPUT_UF2=y
 
 #Enables the internal crystal of the E73-2G4M08S1C. When the external crystal is fixed, this can be disabled.
@@ -29,19 +29,19 @@ CONFIG_CLOCK_CONTROL_NRF_K32SRC_500PPM=y
 #CONFIG_CLOCK_CONTROL_NRF_K32SRC_XTAL=y
 #CONFIG_CLOCK_CONTROL_NRF_K32SRC_20PPM=y
 
-# Enables USB
+# Enables USB.
 CONFIG_ZMK_USB=y
 
-# Enables Bluetooth
+# Enables Bluetooth.
 CONFIG_ZMK_BLE=y
 
-# Enables the encoder
+# Enables the encoder.
 CONFIG_EC11=y
 CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
 
-# Enables underglow LEDs and sets the brightness to 25 percent
+# Enables underglow LEDs and sets the starting brightness to 25 percent.
 CONFIG_ZMK_RGB_UNDERGLOW=y
 CONFIG_ZMK_RGB_UNDERGLOW_BRT_START=25
 
-# Enables the nice!view display
+# Enables the nice!view display.
 CONFIG_ZMK_DISPLAY=y

@@ -9,9 +9,9 @@ exposes:
   - nice_view
 features:
   - keys
-  - display
   - encoder
-  - underglow
+  - underglow # The Lotus58 BLE also has backlight, but it's implemented as upwards facing underglow.
+  - display
   - studio
 outputs:
   - ble

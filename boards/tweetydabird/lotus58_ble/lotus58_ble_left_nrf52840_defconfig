@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: MIT
 
-# Enables the memory protection unit
+# Enables the memory protection unit.
 CONFIG_ARM_MPU=y
 
-# Enables GPIO
+# Enables GPIO.
 CONFIG_GPIO=y
 
 #Enables the internal crystal of the E73-2G4M08S1C. When the external crystal is fixed, this can be disabled.

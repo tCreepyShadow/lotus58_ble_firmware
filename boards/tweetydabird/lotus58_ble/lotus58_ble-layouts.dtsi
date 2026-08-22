@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 
 #include <dt-bindings/zmk/matrix_transform.h> // Matrix transform so the keymap works
-#include <physical_layouts.dtsi> // Needed to
+#include <physical_layouts.dtsi> // Needed to define key positions, so it shows up correctly in ZMK Studio.
 
 / {
 	default_transform: keymap_transform_0 {

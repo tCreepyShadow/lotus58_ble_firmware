@@ -3,7 +3,7 @@
 #include "lotus58_ble.dtsi"
 #include "lotus58_ble_zmk.dtsi"
 
-// Enables the encoder on the left half
+// Enables the encoder on the left half.
 &left_encoder {
   status = "okay";
 };
