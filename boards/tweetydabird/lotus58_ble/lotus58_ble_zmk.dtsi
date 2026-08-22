@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
 
 #include "lotus58_ble-layouts.dtsi" // Layout file with matrix transform and physical layout.
-#include "lotus58_ble-pinctrl.dtsi" // Pin control for the RGB LEDs.
+#include "lotus58_ble-pinctrl.dtsi" // Pin control for the RGB LEDs and nice!view display.
 #include <dt-bindings/led/led.h> // Needed for the color-mapping of the LEDs.
 #include <dt-bindings/zmk/hid_indicators.h> // Needed for the blue indicator LED.
 
 / {
     chosen {
       zmk,kscan = &kscan0;
-      zmk,physical-layout = &physical_layout0; // Used by the layouts file
+      zmk,physical-layout = &physical_layout0; // References the layouts file.
       zmk,underglow = &led_strip; // Needed for underglow.
       zmk,battery = &vbatt; // Needed for battery level sensing.
     };
@@ -70,8 +70,8 @@
     };
 
     // Controls the power of the LEDs through the onboard MOSFETs.
-    // Unused because of a an error on the PCB. Q3 is wired wrong and thusly the power toggle doesn't work.
-    glow_power: EXT_POWER {
+    // Unused because of an error on the PCB. Q3 is wired wrong and thusly the power toggle doesn't work.
+    glow_power: ext_power {
       compatible = "zmk,ext-power-generic";
       control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
       init-delay-ms = <50>;
