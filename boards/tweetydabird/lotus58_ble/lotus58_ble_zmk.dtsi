@@ -89,8 +89,9 @@
       };
     };
 
-    indicators{
+    indicator_led: indicators{
       compatible = "zmk,indicator-leds";
+      status = "disabled";
 
       caps_lock_indicator: caps_lock {
         indicator = <HID_INDICATOR_CAPS_LOCK>;
