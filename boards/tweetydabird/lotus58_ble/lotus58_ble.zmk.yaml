@@ -9,10 +9,10 @@ exposes:
   - nice_view
 features:
   - keys
-#  - display
+  - display
   - encoder
   - underglow
-#  - studio
+  - studio
 outputs:
   - ble
   - usb

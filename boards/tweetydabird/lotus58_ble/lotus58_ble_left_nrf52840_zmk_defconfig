@@ -45,3 +45,6 @@ CONFIG_ZMK_RGB_UNDERGLOW_BRT_START=25
 
 # Enables the nice!view display
 CONFIG_ZMK_DISPLAY=y
+
+# Enables ZMK Studio support
+CONFIG_ZMK_STUDIO=y

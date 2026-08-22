@@ -20,6 +20,7 @@
 include: 
   - board: lotus58_ble_left//zmk
     shield: nice_view
+    snippet: studio-rpc-usb-uart
     artifact-name: lotus58_ble_left
   - board: lotus58_ble_right//zmk
     shield: nice_view
