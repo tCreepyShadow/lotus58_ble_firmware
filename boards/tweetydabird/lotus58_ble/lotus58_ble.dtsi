@@ -35,8 +35,8 @@
   nfct-pins-as-gpios;
 };
 
-// Enables USB device driver
-&usbd {
+// Enables USB device driver. Name is needed for ZMK Studio support
+zephyr_udc0: &usbd {
   status = "okay";
 };
 
