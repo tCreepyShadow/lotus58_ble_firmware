@@ -98,4 +98,4 @@
 			<&key_physical_attrs 100 100 1400   32       0     0     0>, //SW02
 			<&key_physical_attrs 100 100 1500   40       0     0     0>; //SW01
 	};
-}
+};
