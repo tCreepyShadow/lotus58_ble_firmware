@@ -97,7 +97,7 @@
         indicator = <HID_INDICATOR_CAPS_LOCK>;
         leds = <&status_led>;
       };
-
+      /*
       num_lock_indicator: num_lock {
         indicator = <HID_INDICATOR_NUM_LOCK>;
         leds = <&status_led>;
@@ -107,6 +107,7 @@
         indicator = <HID_INDICATOR_SCROLL_LOCK>;
         leds = <&status_led>;
       };
+      */
     };
 };
 
