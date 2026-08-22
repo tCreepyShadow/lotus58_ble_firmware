@@ -7,7 +7,7 @@
 / {
     chosen {
       zmk,kscan = &kscan0;
-      zmk,physical-layout = &default_layout; // Used by the laouts file
+      zmk,physical-layout = &physical_layout; // Used by the layouts file
       zmk,underglow = &led_strip; // Needed for underglow
       zmk,battery = &vbatt; // Needed for battery level sensing
     };
