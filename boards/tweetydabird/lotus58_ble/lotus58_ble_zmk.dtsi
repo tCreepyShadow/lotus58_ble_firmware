@@ -93,21 +93,10 @@
       compatible = "zmk,indicator-leds";
       status = "disabled";
 
-      caps_lock_indicator: caps_lock {
-        indicator = <HID_INDICATOR_CAPS_LOCK>;
+      lock_indicator: lock_indicator {
+        indicator = <HID_INDICATOR_CAPS_LOCK | HID_INDICATOR_NUM_LOCK | HID_INDICATOR_SCROLL_LOCK>;
         leds = <&status_led>;
       };
-      /*
-      num_lock_indicator: num_lock {
-        indicator = <HID_INDICATOR_NUM_LOCK>;
-        leds = <&status_led>;
-      };
-      */
-      scroll_lock_indicator: scroll_lock {
-        indicator = <HID_INDICATOR_SCROLL_LOCK>;
-        leds = <&status_led>;
-      };
-
     };
 };
 
