@@ -94,9 +94,7 @@
       status = "disabled";
 
       lock_indicator: lock_indicator {
-        indicator = <HID_INDICATOR_CAPS_LOCK>,
-                    <HID_INDICATOR_NUM_LOCK>,
-                    <HID_INDICATOR_SCROLL_LOCK>;
+        indicator = <(HID_INDICATOR_CAPS_LOCK | HID_INDICATOR_NUM_LOCK | HID_INDICATOR_SCROLL_LOCK)>;
         leds = <&status_led>;
       };
     };
