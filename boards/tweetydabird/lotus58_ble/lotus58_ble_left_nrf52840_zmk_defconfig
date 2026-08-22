@@ -49,12 +49,12 @@ CONFIG_ZMK_DISPLAY=y
 # Enables ZMK Studio support.
 CONFIG_ZMK_STUDIO=y
 
-// Enables deep sleep.
+# Enables deep sleep.
 CONFIG_ZMK_SLEEP=y
 
-// Sets the number of simultaneously reported keypresses to 10 and enables that-number-of-keys rollover.
+# Sets the number of simultaneously reported keypresses to 10 and enables that-number-of-keys rollover.
 CONFIG_ZMK_HID_CONSUMER_REPORT_SIZE=20
 CONFIG_ZMK_HID_REPORT_TYPE_HKR0=y
 
-// Turns off underglow when idling.
+# Turns off underglow when idling.
 CONFIG_ZMK_RGB_UNDERGLOW_AUTO_OFF_IDLE=y
