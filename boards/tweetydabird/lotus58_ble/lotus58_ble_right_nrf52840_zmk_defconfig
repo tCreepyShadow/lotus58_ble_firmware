@@ -45,3 +45,6 @@ CONFIG_ZMK_RGB_UNDERGLOW_BRT_START=25
 
 # Enables the nice!view display.
 CONFIG_ZMK_DISPLAY=y
+
+# Enables the indicator LED on the right half to match the left one.
+CONFIG_ZMK_SPLIT_PERIPHERAL_HID_INDICATORS=y

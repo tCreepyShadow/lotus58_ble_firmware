@@ -3,6 +3,7 @@
 #include "lotus58_ble-layouts.dtsi" // Layout file with matrix transform and physical layout.
 #include "lotus58_ble-pinctrl.dtsi" // Pin control for the RGB LEDs.
 #include <dt-bindings/led/led.h> // Needed for the color-mapping of the LEDs.
+#include <dt-bindings/zmk/hid_indicators.h> // Needed for the blue indicator LED.
 
 / {
     chosen {
@@ -80,6 +81,32 @@
     vbatt: vbatt {
         compatible = "zmk,battery-nrf-vddh";
     };
+
+    leds {
+      compatible = "gpio-leds";
+      status_led: status_led {
+        gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
+      };
+    };
+
+    indicators{
+      compatible = "zmk,indicator-leds";
+
+      caps_lock_indicator: caps_lock {
+        indicator = <HID_INDICATOR_CAPS_LOCK>;
+        leds = <&status_led>;
+      };
+
+      num_lock_indicator: num_lock {
+        indicator = <HID_INDICATOR_NUM_LOCK>;
+        leds = <&status_led>;
+      };
+
+      scroll_lock_indicator: scroll_lock {
+        indicator = <HID_INDICATOR_SCROLL_LOCK>;
+        leds = <&status_led>;
+      };
+    };
 };
 
 &spi3 {
@@ -96,7 +123,7 @@
     reg = <0>;
     spi-max-frequency = <4000000>;
 
-    chain-length = <28>; // Number of LEDs in the chain.
+    chain-length = <29>; // Number of LEDs in the faux-backlight chain, matching the 29 possible switches.
     spi-one-frame = <0x70>;
     spi-zero-frame = <0x40>;
     color-mapping = <
