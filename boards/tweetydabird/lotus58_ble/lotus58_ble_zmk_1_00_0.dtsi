@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: MIT
+
+// In the v1.00 hardware revision the pin for the status LED and encoder pin a are swapped.
+&encoder {
+    a-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+};
+
+&status_led {
+    gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;
+};
