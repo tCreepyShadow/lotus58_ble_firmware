@@ -5,10 +5,10 @@
 
 // Enables the encoder on the left half.
 &left_encoder {
-  status = "okay";
+	status = "okay";
 };
 
 // Enables the status LED on the left half.
 &indicator_led {
-  status = "okay";
+	status = "okay";
 };

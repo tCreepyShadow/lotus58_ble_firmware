@@ -6,130 +6,130 @@
 #include <dt-bindings/zmk/hid_indicators.h> // Needed for the blue indicator LED.
 
 / {
-    chosen {
-      zmk,kscan = &kscan0;
-      zmk,physical-layout = &physical_layout0; // References the layouts file.
-      zmk,underglow = &led_strip; // Needed for underglow.
-      zmk,battery = &vbatt; // Needed for battery level sensing.
-    };
+	chosen {
+		zmk,kscan = &kscan0;
+		zmk,physical-layout = &physical_layout0; // References the layouts file.
+		zmk,underglow = &led_strip; // Needed for underglow.
+		zmk,battery = &vbatt; // Needed for battery level sensing.
+	};
 
-    kscan0: kscan0 {
-        compatible = "zmk,kscan-gpio-charlieplex";
-        wakeup-source;
+	kscan0: kscan0 {
+		compatible = "zmk,kscan-gpio-charlieplex";
+		wakeup-source;
 
-        // Matrix pin-labels as taken from the schematic.
-        // Pin0 = P0.02
-        // Pin1 = P0.28
-        // Pin2 = P0.03
-        // Pin3 = P0.09
-        // Pin4 = P0.10
-        // Pin5 = P0.24
-        // Pin6 = P0.13
+		// Matrix pin-labels as taken from the schematic.
+		// Pin0 = P0.02
+		// Pin1 = P0.28
+		// Pin2 = P0.03
+		// Pin3 = P0.09
+		// Pin4 = P0.10
+		// Pin5 = P0.24
+		// Pin6 = P0.13
 
-        // Pin connections as noted in the schematic.
-        // |      |      | Pin1 | Pin2 | Pin3 | Pin4 | Pin5 | Pin0 |
-        // |      |      |      |      |      |      |      |      |
-        // | Pin6 |      |      | SW01 | SW02 | SW03 | SW04 | SW05 |
-        // | Pin6 |      | SW06 |      | SW07 | SW08 | SW09 | SW10 |
-        // | Pin6 |      | SW11 | SW12 |      | SW13 | SW14 | SW15 |
-        // | Pin6 |      | SW16 | SW17 | SW18 |      | SW19 | SW20 |
-        // | Pin6 |      | SW21 | SW22 | SW23 | SW24 |      | SW25 |
-        // | Pin6 |      |      | SW26 | SW27 | SW28 | SW29 |      |
+		// Pin connections as noted in the schematic.
+		// |      |      | Pin1 | Pin2 | Pin3 | Pin4 | Pin5 | Pin0 |
+		// |      |      |      |      |      |      |      |      |
+		// | Pin6 |      |      | SW01 | SW02 | SW03 | SW04 | SW05 |
+		// | Pin6 |      | SW06 |      | SW07 | SW08 | SW09 | SW10 |
+		// | Pin6 |      | SW11 | SW12 |      | SW13 | SW14 | SW15 |
+		// | Pin6 |      | SW16 | SW17 | SW18 |      | SW19 | SW20 |
+		// | Pin6 |      | SW21 | SW22 | SW23 | SW24 |      | SW25 |
+		// | Pin6 |      |      | SW26 | SW27 | SW28 | SW29 |      |
 
-        interrupt-gpios = <&gpio0 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        gpios
-          = <&gpio0  2 GPIO_ACTIVE_LOW>
-          , <&gpio0 28 GPIO_ACTIVE_LOW>
-          , <&gpio0  3 GPIO_ACTIVE_LOW>
-          , <&gpio0  9 GPIO_ACTIVE_LOW>
-          , <&gpio0 10 GPIO_ACTIVE_LOW>
-          , <&gpio0 24 GPIO_ACTIVE_LOW>
-          ;
-    };
+		interrupt-gpios = <&gpio0 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		gpios
+			= <&gpio0  2 GPIO_ACTIVE_LOW>
+			, <&gpio0 28 GPIO_ACTIVE_LOW>
+			, <&gpio0  3 GPIO_ACTIVE_LOW>
+			, <&gpio0  9 GPIO_ACTIVE_LOW>
+			, <&gpio0 10 GPIO_ACTIVE_LOW>
+			, <&gpio0 24 GPIO_ACTIVE_LOW>
+			;
+	};
 
-    left_encoder: encoder_left {
-      compatible = "alps,ec11";
-      a-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-      b-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-      steps = <80>;
-      status = "disabled";
-    };
+	left_encoder: encoder_left {
+		compatible = "alps,ec11";
+		a-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		steps = <80>;
+		status = "disabled";
+	};
 
-    right_encoder: encoder_right {
-      compatible = "alps,ec11";
-      a-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-      b-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-      steps = <80>;
-      status = "disabled";
-    };
+	right_encoder: encoder_right {
+		compatible = "alps,ec11";
+		a-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		steps = <80>;
+		status = "disabled";
+	};
 
-    sensors: sensors {
-      compatible = "zmk,keymap-sensors";
-      sensors = <&left_encoder &right_encoder>;
-      triggers-per-rotation = <20>;
-    };
+	sensors: sensors {
+		compatible = "zmk,keymap-sensors";
+		sensors = <&left_encoder &right_encoder>;
+		triggers-per-rotation = <20>;
+	};
 
-    // Controls the power of the LEDs through the onboard MOSFETs.
-    // Unused because of an error on the PCB. Q3 is wired wrong and thus the power toggle doesn't work.
-    glow_power: ext_power {
-      compatible = "zmk,ext-power-generic";
-      control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
-      init-delay-ms = <50>;
-    };
+	// Controls the power of the LEDs through the onboard MOSFETs.
+	// Unused because of an error on the PCB. Q3 is wired wrong and thus the power toggle doesn't work.
+	glow_power: ext_power {
+		compatible = "zmk,ext-power-generic";
+		control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
+		init-delay-ms = <50>;
+	};
 
-    // Uses the nRF52840s built-in VDDH battery level sensor.
-    vbatt: vbatt {
-        compatible = "zmk,battery-nrf-vddh";
-    };
+	// Uses the nRF52840s built-in VDDH battery level sensor.
+	vbatt: vbatt {
+		compatible = "zmk,battery-nrf-vddh";
+	};
 
-    leds {
-      compatible = "gpio-leds";
-      status_led: status_led {
-        gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
-      };
-    };
+	leds {
+		compatible = "gpio-leds";
+		status_led: status_led {
+			gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
+		};
+	};
 
-    indicator_led: indicators{
-      compatible = "zmk,indicator-leds";
-      status = "disabled";
+	indicator_led: indicators{
+		compatible = "zmk,indicator-leds";
+		status = "disabled";
 
-      lock_indicator: lock_indicator {
-        indicator = <(HID_INDICATOR_CAPS_LOCK | HID_INDICATOR_NUM_LOCK | HID_INDICATOR_SCROLL_LOCK)>;
-        leds = <&status_led>;
-      };
-    };
+		lock_indicator: lock_indicator {
+			indicator = <(HID_INDICATOR_CAPS_LOCK | HID_INDICATOR_NUM_LOCK | HID_INDICATOR_SCROLL_LOCK)>;
+			leds = <&status_led>;
+		};
+	};
 };
 
 &spi3 {
-  compatible = "nordic,nrf-spim";
-  status = "okay";
-  pinctrl-0 = <&spi3_default>;
-  pinctrl-1 = <&spi3_sleep>;
-  pinctrl-names = "default", "sleep";
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	pinctrl-0 = <&spi3_default>;
+	pinctrl-1 = <&spi3_sleep>;
+	pinctrl-names = "default", "sleep";
 
-  // The Lotus58 BLE uses WS2812 compatible SK6812MINI-E LEDs.
-  led_strip: ws2812@0 {
-    compatible = "worldsemi,ws2812-spi";
+	// The Lotus58 BLE uses WS2812 compatible SK6812MINI-E LEDs.
+  	led_strip: ws2812@0 {
+		compatible = "worldsemi,ws2812-spi";
 
-    reg = <0>;
-    spi-max-frequency = <4000000>;
+		reg = <0>;
+		spi-max-frequency = <4000000>;
 
-    chain-length = <29>; // Number of LEDs in the faux-backlight chain, matching the 29 possible switches.
-    spi-one-frame = <0x70>;
-    spi-zero-frame = <0x40>;
-    color-mapping = <
-      LED_COLOR_ID_GREEN
-      LED_COLOR_ID_RED
-      LED_COLOR_ID_BLUE
-    >;
-  };
+		chain-length = <29>; // Number of LEDs in the faux-backlight chain, matching the 29 possible switches.
+		spi-one-frame = <0x70>;
+		spi-zero-frame = <0x40>;
+		color-mapping = <
+			LED_COLOR_ID_GREEN
+			LED_COLOR_ID_RED
+			LED_COLOR_ID_BLUE
+		>;
+	};
 };
 
 nice_view_spi: &spi2 {
-  compatible = "nordic,nrf-spim";
-  status = "disabled";
-  pinctrl-0 = <&spi2_default>;
-  pinctrl-1 = <&spi2_sleep>;
-  pinctrl-names = "default", "sleep";
-  cs-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
+	compatible = "nordic,nrf-spim";
+	status = "disabled";
+	pinctrl-0 = <&spi2_default>;
+	pinctrl-1 = <&spi2_sleep>;
+	pinctrl-names = "default", "sleep";
+	cs-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
 };
