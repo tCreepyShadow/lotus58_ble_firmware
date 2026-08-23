@@ -46,7 +46,7 @@
 			, <&gpio0 24 GPIO_ACTIVE_LOW>
 			;
 	};
-
+	/*
 	left_encoder: encoder-left {
 		compatible = "alps,ec11";
 		a-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -64,7 +64,7 @@
 
 		status = "disabled";
 	};
-
+	*/
 	sensors: sensors {
 		compatible = "zmk,keymap-sensors";
 		sensors = <&left_encoder &right_encoder>;
@@ -83,14 +83,14 @@
 	vbatt: vbatt {
 		compatible = "zmk,battery-nrf-vddh";
 	};
-
+	/*
 	leds {
 		compatible = "gpio-leds";
 		status_led: status-led {
 			gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
 		};
 	};
-
+	*/
 	indicator_led: indicators {
 		compatible = "zmk,indicator-leds";
 

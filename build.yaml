@@ -1,8 +1,16 @@
 include:
-  - board: lotus58_ble_left//zmk
+  - board: lotus58_ble_left@1.20.0//zmk
     shield: nice_view
     snippet: studio-rpc-usb-uart
-    artifact-name: lotus58_ble_left
-  - board: lotus58_ble_right//zmk
+    artifact-name: lotus58_ble_left_1_20
+  - board: lotus58_ble_right@1.20.0//zmk
     shield: nice_view
-    artifact-name: lotus58_ble_right
+    artifact-name: lotus58_ble_right_1_20
+
+  - board: lotus58_ble_left@1.00.0//zmk
+    shield: nice_view
+    snippet: studio-rpc-usb-uart
+    artifact-name: lotus58_ble_left_1_00
+  - board: lotus58_ble_right@1.00.0//zmk
+    shield: nice_view
+    artifact-name: lotus58_ble_right_1_00

@@ -15,10 +15,10 @@ features:
 outputs:
   - ble
   - usb
-#revisions:
-#  - v1.20
-#  - v1.10
-#  - v1.00
+revisions:
+  - 1.20.0
+  - 1.10.0
+  - 1.00.0
 siblings:
   - lotus58_ble_left//zmk
   - lotus58_ble_right//zmk
