@@ -5,13 +5,13 @@
 	// Enables SPI on pin P0.05 for the RGB LEDs.
 	// SPI3 is used here, since otherwise SCK would have to be defined and there is no spare pin available for that.
 	// See https://github.com/zephyrproject-rtos/zephyr/issues/57147
-	spi3_default: spi3_default {
+	spi3_default: spi3-default {
 		group1 {
 			psels = <NRF_PSEL(SPIM_MOSI, 0, 5)>;
 		};
 	};
 
-	spi3_sleep: spi3_sleep {
+	spi3_sleep: spi3-sleep {
 		group1 {
 			psels = <NRF_PSEL(SPIM_MOSI, 0, 5)>;
 			low-power-enable;
@@ -19,14 +19,14 @@
 	};
 
 	// Enables SPI on pins P0.29 and P0.30 for the nice!view display.
-	spi2_default: spi2_default {
+	spi2_default: spi2-default {
 		group1 {
 			psels = <NRF_PSEL(SPIM_SCK, 0, 29)>,
 				<NRF_PSEL(SPIM_MOSI, 0, 30)>;
 		};
 	};
 
-	spi2_sleep: spi2_sleep {
+	spi2_sleep: spi2-sleep {
 		group1 {
 			psels = <NRF_PSEL(SPIM_SCK, 0, 29)>,
 				<NRF_PSEL(SPIM_MOSI, 0, 30)>;
