@@ -1,3 +1,4 @@
+# Copyright (c) 2026 Oscar Brandt
 # SPDX-License-Identifier: MIT
 
 # Enables the memory protection unit.
@@ -34,19 +35,3 @@ CONFIG_ZMK_USB=y
 
 # Enables Bluetooth.
 CONFIG_ZMK_BLE=y
-
-# Enables the encoder.
-CONFIG_EC11=y
-CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
-
-# Enables the nice!view display.
-CONFIG_ZMK_DISPLAY=y
-
-# Enables ZMK Studio support.
-CONFIG_ZMK_STUDIO=y
-
-# Enables deep sleep.
-CONFIG_ZMK_SLEEP=y
-
-# Enables n-key rollover.
-CONFIG_ZMK_HID_REPORT_TYPE_NKRO=y

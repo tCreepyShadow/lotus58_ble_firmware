@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Oscar Brandt
 // SPDX-License-Identifier: MIT
 
 #include "lotus58_ble-layouts.dtsi" // Layout file with matrix transform and physical layout.

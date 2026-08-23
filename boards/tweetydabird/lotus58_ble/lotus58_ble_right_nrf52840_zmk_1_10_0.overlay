@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Oscar Brandt
 // SPDX-License-Identifier: MIT
 
 #include "lotus58_ble_zmk_1_10_0.dtsi"

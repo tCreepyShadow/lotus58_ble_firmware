@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Oscar Brandt
 // SPDX-License-Identifier: MIT
 
 // In the v1.10 hardware revision the pin for the status LED and encoder pin a are swapped.
