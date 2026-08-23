@@ -1,4 +1,3 @@
 // SPDX-License-Identifier: MIT
 
-// There has been no hardware change between v1.10 and v1.20
 #include "lotus58_ble_zmk_1_10_0.dtsi"
