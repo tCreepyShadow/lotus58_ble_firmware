@@ -21,7 +21,7 @@ CONFIG_FLASH_MAP=y
 # Output firmware as UF2 file.
 CONFIG_BUILD_OUTPUT_UF2=y
 
-# Enables the rc oscillator of the nrf52840. When the external crystal is fixed, this can be disabled.
+# Enables the RC oscillator of the nRF52840. When the external crystal is fixed, this can be disabled.
 CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
 CONFIG_CLOCK_CONTROL_NRF_K32SRC_500PPM=y
 

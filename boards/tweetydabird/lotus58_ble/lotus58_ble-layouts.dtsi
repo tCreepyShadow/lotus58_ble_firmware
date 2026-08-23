@@ -4,7 +4,7 @@
 #include <physical_layouts.dtsi> // Needed to define key positions, so it shows up correctly in ZMK Studio.
 
 / {
-	default_transform: keymap-transform_0 {
+	default_transform: keymap-transform-0 {
 		compatible = "zmk,matrix-transform";
 		columns = <12>;
 		rows = <5>;
@@ -31,7 +31,7 @@
 		>;
 	};
 
-	physical_layout0: physical-layout_0 {
+	physical_layout0: physical-layout-0 {
 		compatible = "zmk,physical-layout";
 		display-name = "Default Layout";
 		transform = <&default_transform>;

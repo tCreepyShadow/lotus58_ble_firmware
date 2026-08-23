@@ -91,7 +91,7 @@
 		};
 	};
 
-	indicator_led: indicators{
+	indicator_led: indicators {
 		compatible = "zmk,indicator-leds";
 
 		status = "disabled";
@@ -112,7 +112,7 @@
 	status = "okay";
 
 	// The Lotus58 BLE uses WS2812 compatible SK6812MINI-E LEDs.
-  	led_strip: ws2812@0 {
+	led_strip: ws2812@0 {
 		compatible = "worldsemi,ws2812-spi";
 		reg = <0>;
 		spi-max-frequency = <4000000>;
