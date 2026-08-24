@@ -7,10 +7,10 @@ CONFIG_ARM_MPU=y
 # Enables GPIO.
 CONFIG_GPIO=y
 
-# Enables the RC oscillator of the nRF52840. When the external crystal is fixed, this can be disabled.
+# Enables the RC oscillator of the nRF52840. When the external crystal is fixed, this can be removed.
 CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
 CONFIG_CLOCK_CONTROL_NRF_K32SRC_500PPM=y
 
-# Uncomment to enable the external crystal on the board. Currently not used as the wrong crystal is on the board.
+# Uncomment to enable the external crystal. Currently not used as the wrong crystal is on the board.
 #CONFIG_CLOCK_CONTROL_NRF_K32SRC_XTAL=y
 #CONFIG_CLOCK_CONTROL_NRF_K32SRC_20PPM=y
