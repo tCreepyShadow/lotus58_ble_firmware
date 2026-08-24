@@ -42,8 +42,8 @@ Make the changes you want to do, for example uncommenting these two lines by rem
 
 ```
 # Uncomment to enable the encoders.
-CONFIG_EC11=y
-CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
+#CONFIG_EC11=y
+#CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
 ```
 
 to
