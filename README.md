@@ -15,7 +15,7 @@ Now, when using `zmk keyboard new` you should be able too search for "lotus58_bl
 
 Since the module uses the Zephyr hardware model v2, you'll need to switch from ZMK v0.3 to it's main branch. You can do that with `zmk version main`
 
-Right now the hardware revision support of the ZMK cli is broken. You'll need to open build.yaml with `zmk code --build` and fix it. The file should have this included at the end.
+Right now the hardware revision support of the ZMK cli is broken. You'll need to open build.yaml with `zmk code --build` and fix it. The file should have this included at the end. `@x.xx` is a placeholder for your specific version.
 
 ```
 include:
