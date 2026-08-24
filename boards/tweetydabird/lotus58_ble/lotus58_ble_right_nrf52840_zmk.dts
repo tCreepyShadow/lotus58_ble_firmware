@@ -13,3 +13,8 @@
 &right_encoder {
 	status = "okay";
 };
+
+// Enables the status LED on the left half.
+&indicator_led {
+	status = "okay";
+};
