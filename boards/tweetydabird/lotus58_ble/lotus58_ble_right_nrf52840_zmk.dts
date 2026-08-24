@@ -14,7 +14,9 @@
 	status = "okay";
 };
 
-// Enables the status LED on the right half.
+// Enables the status LED on the right half. Currently broken in ZMK.
+/*
 &indicator_led {
 	status = "okay";
 };
+*/
