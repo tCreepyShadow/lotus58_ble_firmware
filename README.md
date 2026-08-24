@@ -63,11 +63,11 @@ For these two features it's not enough to enable them in the configuration file,
 
 ```
 include:
-  - board: lotus58_ble_left//zmk
+  - board: lotus58_ble_left@1.20//zmk
     shield: nice_view
     snippet: studio-rpc-usb-uart
     artifact-name: lotus58_ble_left_studio_display
-  - board: lotus58_ble_right//zmk
+  - board: lotus58_ble_right@1.20//zmk
     shield: nice_view
     artifact-name: lotus58_ble_right_studio_display
 ```
