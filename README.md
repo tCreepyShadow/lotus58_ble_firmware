@@ -55,3 +55,21 @@ CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
 ```
 
 Now when building, the firmware will have the encoders enabled.
+
+
+## ZMK Studio and Nice!View display
+
+For these two features it's not enough to enable them in the configuration file, you'll also need to add them to the build.yaml
+
+```
+include:
+  - board: lotus58_ble_left//zmk
+    shield: nice_view
+    snippet: studio-rpc-usb-uart
+    artifact-name: lotus58_ble_left_studio_display
+  - board: lotus58_ble_right//zmk
+    shield: nice_view
+    artifact-name: lotus58_ble_right_studio_display
+```
+
+The artifact-name just renames the .uf2 firmware files for clarity.
