@@ -1,4 +1,4 @@
-# Lotus 58 ZMK Module
+# Lotus58 BLE ZMK Module
 
 This repo defines the ZMK module for the Lotus58 BLE keyboard by tweetydabird.
 
