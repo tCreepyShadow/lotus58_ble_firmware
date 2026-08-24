@@ -19,16 +19,16 @@ Right now the hardware revision support of the ZMK cli is broken. You'll need to
 
 ```
 include:
-  - board: lotus58_ble_left//zmk@1.20
-  - board: lotus58_ble_right//zmk@1.20
+  - board: lotus58_ble_left//zmk@x.xx
+  - board: lotus58_ble_right//zmk@x.xx
 ```
 
 You need to move the board revision after the board name, but before the board qualifiers. Like this: 
 
 ```
 include:
-  - board: lotus58_ble_left@1.20//zmk
-  - board: lotus58_ble_right@1.20//zmk
+  - board: lotus58_ble_left@x.xx//zmk
+  - board: lotus58_ble_right@x.xx//zmk
 ```
 
 Save the file and push the changes following the ZMK guide and you should get a firmware.
@@ -63,11 +63,11 @@ For these two features it's not enough to enable them in the configuration file,
 
 ```
 include:
-  - board: lotus58_ble_left@1.20//zmk
+  - board: lotus58_ble_left@x.xx//zmk
     shield: nice_view
     snippet: studio-rpc-usb-uart
     artifact-name: lotus58_ble_left_studio_display
-  - board: lotus58_ble_right@1.20//zmk
+  - board: lotus58_ble_right@x.xx//zmk
     shield: nice_view
     artifact-name: lotus58_ble_right_studio_display
 ```
