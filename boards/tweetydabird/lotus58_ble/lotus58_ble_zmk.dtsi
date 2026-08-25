@@ -72,14 +72,6 @@
 		triggers-per-rotation = <20>;
 	};
 
-	// Controls the power of the LEDs through the onboard MOSFETs.
-	// Unused because of an error on the PCB. Q3 is wired wrong and thus the power toggle doesn't work.
-	glow_power: ext-power {
-		compatible = "zmk,ext-power-generic";
-		control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
-		init-delay-ms = <50>;
-	};
-
 	// Uses the nRF52840s built-in VDDH battery level sensor.
 	vbatt: vbatt {
 		compatible = "zmk,battery-nrf-vddh";

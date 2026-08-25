@@ -1,5 +1,5 @@
 // Copyright (c) 2026 Oscar Brandt
 // SPDX-License-Identifier: MIT
 
-// There has been no hardware change between v1.10 and v1.20
+// There has been no hardware change between v1.10 and v1.20 that affects the devicetree.
 #include "lotus58_ble_zmk_1_10_0.dtsi"

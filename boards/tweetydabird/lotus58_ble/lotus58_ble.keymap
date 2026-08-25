@@ -4,7 +4,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h> // Needed for Bluetooth keybinds.
-//#include <dt-bindings/zmk/ext_power.h> // Needed for the ability to switch off power to the underglow LEDs. Doesn't work right now, see lotus58_ble_zmk.dtsi file.
 #include <dt-bindings/zmk/rgb.h> // Needed for controlling the underglow LEDs.
 
 / {
