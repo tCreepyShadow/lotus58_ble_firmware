@@ -22,8 +22,11 @@ CONFIG_FLASH_MAP=y
 # Output firmware as UF2 file.
 CONFIG_BUILD_OUTPUT_UF2=y
 
-# Enables the RC oscillator of the nRF52840.
+# Enables the RC oscillator of the nRF52840, since the board doesn't have an external (XTAL) one.
 CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
+
+# Disables external power cut when toggling underglow, since the MOSFET switch is wired incorrectly.
+CONFIG_ZMK_RGB_UNDERGLOW_EXT_POWER=n
 
 # Enables USB.
 CONFIG_ZMK_USB=y
