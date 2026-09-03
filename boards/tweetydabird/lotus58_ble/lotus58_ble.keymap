@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h> // Needed for Bluetooth keybinds.
 #include <dt-bindings/zmk/rgb.h> // Needed for controlling the underglow LEDs.
-//#include <dt-bindings/zmk/ext_power.h> // Needed for the ability to switch off power to the underglow LEDs. Doesn't work right now, see lotus58_ble_zmk.dtsi file.
+#include <dt-bindings/zmk/outputs.h> // Needed to be able to switch between Bluetooth and USB for the output.
 
 / {
 	keymap {
@@ -40,11 +40,11 @@
 		raise {
 			display-name = "Raise";
 			bindings = <
-				&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                 &trans      &trans       &trans       &trans   &trans    &trans
-				&kp GRAVE  &kp N1       &kp N2       &kp N3        &kp N4        &kp N5                       &kp N6      &kp N7       &kp N8       &kp N9   &kp N0    &trans
-				&kp F1     &kp F2       &kp F3       &kp F4        &kp F5        &kp F6                       &trans      &kp LEFT     &kp DOWN     &kp UP   &kp RIGHT &trans
-				&kp F7     &kp F8       &kp F9       &kp F10       &kp F11       &kp F12      &trans   &trans &kp KP_PLUS &kp KP_MINUS &kp KP_EQUAL &kp LBKT &kp RBKT  &kp BSLH
-				                                     &trans        &trans        &trans       &trans   &trans &trans      &trans       &trans
+				&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &trans      &trans       &trans       &trans   &trans    &trans
+				&kp GRAVE  &kp N1       &kp N2       &kp N3        &kp N4        &kp N5                             &kp N6      &kp N7       &kp N8       &kp N9   &kp N0    &trans
+				&kp F1     &kp F2       &kp F3       &kp F4        &kp F5        &kp F6                             &trans      &kp LEFT     &kp DOWN     &kp UP   &kp RIGHT &trans
+				&kp F7     &kp F8       &kp F9       &kp F10       &kp F11       &kp F12      &out OUT_TOG   &trans &kp KP_PLUS &kp KP_MINUS &kp KP_EQUAL &kp LBKT &kp RBKT  &kp BSLH
+				                                     &trans        &trans        &trans       &trans         &trans &trans      &trans       &trans
 			>;
 		};
 	};
