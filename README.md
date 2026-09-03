@@ -1,21 +1,21 @@
 # Lotus58 BLE ZMK Module
 
-This repo defines the ZMK module for the Lotus58 BLE keyboard by tweetydabird.
+This repo defines the ZMK module for the Lotus58 BLE keyboard by TweetyDaBird.
 
 
 ## How to build
 
-Follow the instruction in the [ZMK documentation](https://zmk.dev/docs/user-setup) up to the step **Add a keyboard** . You'll need to add this module to your ZMK configuration using the command
+Follow the instructions in the [ZMK documentation](https://zmk.dev/docs/user-setup) up to the step **Add a keyboard**. You'll need to add this module to your ZMK configuration using the command
 
 ```
 zmk module add https://github.com/tCreepyShadow/lotus58_ble_firmware
 ```
 
-Now, when using `zmk keyboard new` you should be able too search for "lotus58_ble" and select it and your corresponding hardware revision.
+Now, when using `zmk keyboard add` you should be able to search for "lotus58_ble" and select it and your corresponding hardware revision.
 
-Since the module uses the Zephyr hardware model v2, you'll need to switch from ZMK v0.3 to it's main branch. You can do that with `zmk version main`
+Since the module uses the Zephyr hardware model v2, you'll need to switch from ZMK v0.3 to its main branch. You can do that with `zmk version main`
 
-Right now the hardware revision support of the ZMK cli is broken. You'll need to open build.yaml with `zmk code --build` and fix it. The file should have this included at the end. `@x.xx` is a placeholder for your specific version.
+Right now the hardware revision support of the ZMK CLI is broken. You'll need to open build.yaml with `zmk code --build` and fix it. The file should have this included at the end. `@x.xx` is a placeholder for your specific version.
 
 ```
 include:
@@ -23,7 +23,7 @@ include:
   - board: lotus58_ble_right//zmk@x.xx
 ```
 
-You need to move the board revision after the board name, but before the board qualifiers. Like this: 
+You need to move the board revision after the board name, but before the board qualifiers. Like this:
 
 ```
 include:
@@ -31,7 +31,7 @@ include:
   - board: lotus58_ble_right@x.xx//zmk
 ```
 
-Save the file and push the changes following the ZMK guide and you should get a firmware.
+Save the file and push the changes following the ZMK guide and you should get a firmware build.
 
 
 ## How to customise
@@ -57,7 +57,7 @@ CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
 Now when building, the firmware will have the encoders enabled.
 
 
-## ZMK Studio and Nice!View display
+## ZMK Studio and nice!view display
 
 For these two features it's not enough to enable them in the configuration file, you'll also need to add them to the build.yaml
 

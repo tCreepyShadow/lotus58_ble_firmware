@@ -6,8 +6,8 @@
 #include <nordic/nrf52840_qiaa.dtsi>
 
 / {
+	compatible = "tweetydabird,lotus58_ble";
 	model = "Lotus58 BLE";
-	compatible = "lotus58_ble";
 
 	chosen {
 		zephyr,code-partition = &code_partition;

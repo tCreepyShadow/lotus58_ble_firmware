@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: MIT
 
 &pinctrl {
-
 	// Enables SPI on pin P0.05 for the RGB LEDs.
 	// SPI3 is used here, since otherwise SCK would have to be defined and there is no spare pin available for that.
 	// See https://github.com/zephyrproject-rtos/zephyr/issues/57147

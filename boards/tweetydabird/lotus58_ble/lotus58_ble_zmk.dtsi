@@ -38,14 +38,14 @@
 		// | Pin6 |      |      | SW26 | SW27 | SW28 | SW29 |      |
 
 		interrupt-gpios = <&gpio0 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-		gpios
-			= <&gpio0  2 GPIO_ACTIVE_LOW>
-			, <&gpio0 28 GPIO_ACTIVE_LOW>
-			, <&gpio0  3 GPIO_ACTIVE_LOW>
-			, <&gpio0  9 GPIO_ACTIVE_LOW>
-			, <&gpio0 10 GPIO_ACTIVE_LOW>
-			, <&gpio0 24 GPIO_ACTIVE_LOW>
-			;
+		gpios = <
+			&gpio0  2 GPIO_ACTIVE_LOW>,
+			<&gpio0 28 GPIO_ACTIVE_LOW>,
+			<&gpio0  3 GPIO_ACTIVE_LOW>,
+			<&gpio0  9 GPIO_ACTIVE_LOW>,
+			<&gpio0 10 GPIO_ACTIVE_LOW>,
+			<&gpio0 24 GPIO_ACTIVE_LOW
+		>;
 	};
 
 	left_encoder: encoder-left {
@@ -78,6 +78,8 @@
 		compatible = "zmk,ext-power-generic";
 		control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
 		init-delay-ms = <50>;
+
+		status = "disabled";
 	};
 
 	// Uses the nRF52840s built-in VDDH battery level sensor.

@@ -3,13 +3,13 @@
 
 // In the v1.10 hardware revision the pin for the status LED and encoder pin a are swapped.
 &left_encoder {
-    a-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 };
 
 &right_encoder {
-    a-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 };
 
 &status_led {
-    gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
+        gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
 };

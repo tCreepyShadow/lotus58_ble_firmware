@@ -22,6 +22,9 @@ CONFIG_FLASH_MAP=y
 # Output firmware as UF2 file.
 CONFIG_BUILD_OUTPUT_UF2=y
 
+# Enables the RC oscillator of the nRF52840.
+CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
+
 # Enables USB.
 CONFIG_ZMK_USB=y
 
