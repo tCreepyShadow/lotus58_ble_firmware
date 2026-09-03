@@ -22,7 +22,7 @@ Push the changes following the ZMK guide and you should get a firmware build.
 
 With `zmk code lotus58_ble` you can open the keymap and with `zmk code --conf lotus58_ble` the configuration file.
 
-Make the changes you want to do, for example uncommenting these two lines by removing the hashes.
+Make the changes you want to do, for example uncommenting this line by removing the hash.
 
 ```
 # Uncomment to enable the encoders.
