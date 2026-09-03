@@ -7,10 +7,10 @@ url: https://github.com/TweetyDaBird/Lotus-58-BLE
 exposes: [nice_view_header]
 features:
   - keys
-  - encoder
-  # The Lotus58 BLE also has backlight, but it's implemented as upward-facing underglow.
-  - underglow
   - display
+  - encoder
+  - underglow
+  # The Lotus58 BLE also has backlight, but it's implemented as upward-facing underglow.
   - studio
 outputs:
   - ble
