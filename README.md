@@ -15,23 +15,7 @@ Now, when using `zmk keyboard add` you should be able to search for "lotus58_ble
 
 Since the module uses the Zephyr hardware model v2, you'll need to switch from ZMK v0.3 to its main branch. You can do that with `zmk version main`
 
-Right now the hardware revision support of the ZMK CLI is broken. You'll need to open build.yaml with `zmk code --build` and fix it. The file should have this included at the end. `@x.xx` is a placeholder for your specific version.
-
-```
-include:
-  - board: lotus58_ble_left//zmk@x.xx
-  - board: lotus58_ble_right//zmk@x.xx
-```
-
-You need to move the board revision after the board name, but before the board qualifiers. Like this:
-
-```
-include:
-  - board: lotus58_ble_left@x.xx//zmk
-  - board: lotus58_ble_right@x.xx//zmk
-```
-
-Save the file and push the changes following the ZMK guide and you should get a firmware build.
+Push the changes following the ZMK guide and you should get a firmware build.
 
 
 ## How to customise
