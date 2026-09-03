@@ -55,3 +55,7 @@ include:
 ```
 
 @x.xx is your revision qualifier, while artifact-name just renames the .uf2 firmware files for clarity.
+
+## Features only on one half
+
+If you have an encoder or display only on one half of the keyboard, follow the instructions in lotus58_ble.conf.
