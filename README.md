@@ -5,7 +5,7 @@ This repo defines the ZMK module for the Lotus58 BLE keyboard by tweetydabird.
 
 ## How to build
 
-Follow the instruction in the [ZMK documentation](https://zmk.dev/docs/user-setup) up to the step **Add a keyboard** . You'll noud to add this module to your ZMK configuration using the command
+Follow the instruction in the [ZMK documentation](https://zmk.dev/docs/user-setup) up to the step **Add a keyboard** . You'll need to add this module to your ZMK configuration using the command
 
 ```
 zmk module add https://github.com/tCreepyShadow/lotus58_ble_firmware
