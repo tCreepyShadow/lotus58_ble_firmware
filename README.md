@@ -59,3 +59,9 @@ include:
 ## Features only on one half
 
 If you have an encoder or display only on one half of the keyboard, follow the instructions in lotus58_ble.conf.
+
+
+
+# Keymap
+
+The keymap supplied with this firmware is the same as the Lily58 default with additional keybinds for RGB and Bluetooth functionality.
