@@ -54,4 +54,4 @@ include:
     artifact-name: lotus58_ble_right_studio_display
 ```
 
-The artifact-name just renames the .uf2 firmware files for clarity.
+@x.xx is your revision qualifier, while artifact-name just renames the .uf2 firmware files for clarity.
